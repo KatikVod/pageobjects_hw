@@ -10,6 +10,7 @@ public class PracticeFormTests extends TestBase {
     @Test
     void fillAllFieldsTest() {
         practiceFormPage.openPage()
+                .removeBanners()
                 .setFirstName("Ekaterina")
                 .setLastName("Vodolazhskaia")
                 .setEmail("testmail@gmail.com")
@@ -42,6 +43,7 @@ public class PracticeFormTests extends TestBase {
     @Test
     void fillOnlyRequiredFieldsTest() {
         practiceFormPage.openPage()
+                .removeBanners()
                 .setFirstName("Ivan")
                 .setLastName("Petrov")
                 .setGender("Male")
@@ -58,6 +60,7 @@ public class PracticeFormTests extends TestBase {
     @Test
     void emptyFirstNameTest() {
         practiceFormPage.openPage()
+                .removeBanners()
                 .setLastName("Ivanov")
                 .setGender("Other")
                 .setUserNumber("1111111111")

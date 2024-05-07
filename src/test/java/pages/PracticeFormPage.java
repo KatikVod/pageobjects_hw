@@ -30,8 +30,6 @@ public class PracticeFormPage {
     public PracticeFormPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
 
         return this;
     }
@@ -128,4 +126,12 @@ public class PracticeFormPage {
 
         return this;
     }
+
+    public PracticeFormPage removeBanners() {
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
+
+        return this;
+    }
+
 }
